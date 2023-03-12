@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "29a5564c-0346-4b8c-b4e8-27721894e558",
+		"name": "Google Translate Wrapper",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "(V2) Translate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"I am James\",\n    \"target_locale\": \"zh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/google-translate/v2/translate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"google-translate",
+						"v2",
+						"translate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(V2) Detect",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Finished na ba yung homework mo?\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/google-translate/v2/detect",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"google-translate",
+						"v2",
+						"detect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(V3) Translate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"I am James\",\n    \"target_locale\": \"zh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/google-translate/v3/translate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"google-translate",
+						"v3",
+						"translate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(V3) Detect",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Finished na ba yung homework mo?\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/google-translate/v3/detect",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"google-translate",
+						"v3",
+						"detect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(Common) Translate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"I am James\",\n    \"target_locale\": \"zh\",\n    \"v3\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/google-translate/translate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"google-translate",
+						"translate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(Common) Detect",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Finished na ba yung homework mo?\",\n    \"v3\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/google-translate/detect",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"google-translate",
+						"detect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(V3) List Glossaries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/google-translate/v3/glossaries",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"google-translate",
+						"v3",
+						"glossaries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(V3) Create Glossary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"projects/%ADD_YOUR_GCP_PROJECT_HERE%/locations/us-central1/glossaries/branding\",\n    \"gcs_source\": \"gs://%ADD_YOUR_BUCKET_NAME_HERE%/sample_glossary.tmx\",\n    \"source_locale\": \"en\",\n    \"target_locale\": \"zh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/google-translate/v3/glossaries",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"google-translate",
+						"v3",
+						"glossaries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(V3) Delete Glossary",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"projects/%ADD_YOUR_GCP_PROJECT_HERE%/locations/us-central1/glossaries/branding\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/google-translate/v3/glossaries",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"google-translate",
+						"v3",
+						"glossaries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(V3) Translate (with Glossary)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"I want to catch a Pikachu\",\n    \"target_locale\": \"zh\",\n    \"source_locale\": \"en\",\n    \"glossary\": {\n        \"id\": \"projects/%ADD_YOUR_GCP_PROJECT_HERE%/locations/us-central1/glossaries/branding\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/google-translate/v3/translate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"google-translate",
+						"v3",
+						"translate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
