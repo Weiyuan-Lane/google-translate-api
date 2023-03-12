@@ -1,0 +1,8 @@
+.db/
+.cache/
+.go/
+build/
+.vscode/
+.env
+credentials.json
+.DS_Store

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ ! -f $APP_DIR/.env ]; then
+  echo ".env file not found - creating new .env file from template"
+  cp $APP_DIR/tools/env_template $APP_DIR/.env
+fi
+
+CompileDaemon -build="go build -o build/service_bin cmd/main.go" -command="./build/service_bin"
